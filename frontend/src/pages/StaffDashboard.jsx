@@ -4,9 +4,8 @@ import "./AdminDashboard.css";
 import LoanApplicationManagement from "./LoanApplicationManagement";
 import AccountMenu from "../components/AccountMenu";
 
-const API_URL = "http://localhost:5000/api/leads";
-const DOCUMENT_API = "http://localhost:5000/api/documents";
-
+const API_URL = `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/leads`;
+const DOCUMENT_API = `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/documents`;
 const callStatuses = [
   "Contacted",
   "Interested",

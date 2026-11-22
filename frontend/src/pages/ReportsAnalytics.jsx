@@ -1,7 +1,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 
-const API = "http://localhost:5000/api/reports";
+const API = `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/reports`;
 
 const money = (value) =>
   `₹${Number(value || 0).toLocaleString("en-IN")}`;

@@ -2,7 +2,7 @@
 import { useCallback, useEffect, useState } from "react";
 
 const CALL_REPORT_API =
-  "http://localhost:5000/api/reports/calls";
+  `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/reports/calls`
 
 const formatNumber = (value) =>
   Number(value || 0).toLocaleString("en-IN");

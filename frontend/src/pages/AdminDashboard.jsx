@@ -8,8 +8,11 @@ import LoanApplicationManagement from "./LoanApplicationManagement.jsx";
 import ReportsAnalytics from "./ReportsAnalytics.jsx";
 import AccountMenu from "../components/AccountMenu";
 import CallTracking from "./CallTracking.jsx";
+const API_BASE = (
+  import.meta.env.VITE_API_URL || "http://localhost:5000"
+).replace(/\/$/, "");
 
-const DOCUMENT_API = "http://localhost:5000/api/documents";
+const DOCUMENT_API = `${API_BASE}/api/documents`;
 
 const documentInputStyle = {
   width: "100%",
@@ -91,7 +94,7 @@ function AdminDashboard() {
     const fetchCallStatistics = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/reports/overview",
+          `${API_BASE}/api/reports/overview`,
           {
             headers: {
               Authorization: `Bearer ${getAdminToken()}`,
@@ -136,7 +139,7 @@ function AdminDashboard() {
         const token = sessionStorage.getItem("token");
 
         const response = await fetch(
-          "http://localhost:5000/api/leads",
+          `${API_BASE}/api/leads`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -165,7 +168,7 @@ function AdminDashboard() {
         const token = sessionStorage.getItem("token");
 
         const response = await fetch(
-          "http://localhost:5000/api/employees",
+          `${API_BASE}/api/employees`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -194,7 +197,7 @@ function AdminDashboard() {
     const fetchLoanApplications = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/loan-applications",
+          `${API_BASE}/api/loan-applications`,
           {
             headers: {
               Authorization: `Bearer ${getAdminToken()}`,
@@ -303,7 +306,7 @@ function AdminDashboard() {
       setActivitiesError("");
       try {
         const response = await fetch(
-          "http://localhost:5000/api/reports/recent-activity",
+          `${API_BASE}/api/reports/recent-activity`,
           {
             headers: { Authorization: `Bearer ${getAdminToken()}` },
             signal: controller.signal,
