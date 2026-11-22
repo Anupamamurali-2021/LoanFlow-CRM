@@ -1,0 +1,316 @@
+
+.login-page {
+  min-height: 100vh;
+  background: #f7f3ee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+}
+
+.login-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  max-width: 1100px;
+  min-height: 650px;
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(59, 36, 28, 0.12);
+}
+
+.login-brand {
+  background: linear-gradient(145deg, #3b241c, #1d1512);
+  color: white;
+  padding: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.brand-logo {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.brand-symbol {
+  color: #d6b89c;
+  margin-right: 12px;
+}
+
+.brand-label,
+.welcome-label {
+  color: #c79e7d;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.brand-content h1 {
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.2;
+  margin: 20px 0;
+}
+
+.brand-content p {
+  color: #d6c5b9;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.brand-features {
+  margin-top: 35px;
+  display: grid;
+  gap: 18px;
+  color: #e8d8c8;
+  font-size: 14px;
+}
+
+.brand-footer {
+  color: #bba595;
+  font-size: 13px;
+}
+
+.login-form-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 45px;
+}
+
+.login-form-wrapper {
+  width: 100%;
+  max-width: 380px;
+}
+
+.login-form-wrapper h2 {
+  color: #302019;
+  font-size: 30px;
+  margin: 15px 0;
+}
+
+.login-subtitle {
+  color: #88766b;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+.login-form-wrapper label {
+  display: block;
+  color: #3b241c;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.login-form-wrapper input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ded2c7;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-bottom: 24px;
+  outline: none;
+  background: #fff;
+  color: #302019;
+}
+
+.login-form-wrapper input:focus {
+  border-color: #8b5e3c;
+  box-shadow: 0 0 0 3px rgba(139, 94, 60, 0.12);
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 70px;
+}
+
+.show-password {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  background: none;
+  border: none;
+  color: #8b5e3c;
+  cursor: pointer;
+}
+
+.login-button {
+  width: 100%;
+  padding: 16px;
+  background: #3b241c;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.login-button:hover {
+  background: #6b4432;
+}
+
+.login-help {
+  text-align: center;
+  color: #88766b;
+  font-size: 13px;
+  margin-top: 25px;
+}
+
+.back-link {
+  display: block;
+  text-align: center;
+  color: #8b5e3c;
+  margin-top: 25px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .login-page {
+    padding: 15px;
+  }
+
+  .login-container {
+    grid-template-columns: 1fr;
+  }
+
+  .login-brand {
+    padding: 25px;
+    gap: 20px;
+  }
+
+  .brand-content h1 {
+    font-size: 28px;
+  }
+
+  .brand-features,
+  .brand-footer {
+    display: none;
+  }
+
+  .login-form-section {
+    padding: 35px 25px;
+  }
+}
+
+/* =========================================
+   MOBILE ADMIN LOGIN PAGE
+   Only applies when opening /mobile-admin
+========================================= */
+
+.mobile-admin-login-page {
+  min-height: 100vh;
+  padding: 24px 12px;
+  background: #f7f3ee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.mobile-admin-login-page .login-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 430px;
+  min-height: 0;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 12px 35px rgba(59, 36, 28, 0.12);
+}
+
+/* Compact mobile branding */
+.mobile-admin-login-page .login-brand {
+  padding: 28px 25px;
+  gap: 14px;
+  background: linear-gradient(145deg, #3b241c, #1d1512);
+}
+
+.mobile-admin-login-page .brand-logo {
+  font-size: 23px;
+}
+
+.mobile-admin-login-page .brand-content {
+  margin-top: 8px;
+}
+
+.mobile-admin-login-page .brand-content h1 {
+  font-size: 22px;
+  line-height: 1.3;
+  margin: 10px 0;
+}
+
+.mobile-admin-login-page .brand-content p {
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.mobile-admin-login-page .brand-features,
+.mobile-admin-login-page .brand-footer {
+  display: none;
+}
+
+/* Mobile login form */
+.mobile-admin-login-page .login-form-section {
+  width: 100%;
+  padding: 30px 25px;
+  box-sizing: border-box;
+}
+
+.mobile-admin-login-page .login-form-wrapper {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.mobile-admin-login-page .login-form-wrapper h2 {
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+.mobile-admin-login-page .login-subtitle {
+  font-size: 13px;
+  margin-bottom: 25px;
+}
+
+.mobile-admin-login-page .login-form-wrapper input {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.mobile-admin-login-page .login-button {
+  width: 100%;
+  min-height: 48px;
+}
+
+@media (max-width: 480px) {
+  .mobile-admin-login-page {
+    padding: 12px;
+    align-items: flex-start;
+  }
+
+  .mobile-admin-login-page .login-container {
+    border-radius: 16px;
+  }
+
+  .mobile-admin-login-page .login-brand {
+    padding: 24px 20px;
+  }
+
+  .mobile-admin-login-page .login-form-section {
+    padding: 26px 20px;
+  }
+}
