@@ -32,6 +32,7 @@ const PORT = process.env.PORT || 5000;
 // Allow requests from local and deployed frontend
 const allowedOrigins = [
   "http://localhost:5173",
+  "https://loan-flow-crm.vercel.app",
   process.env.FRONTEND_URL,
 ].filter(Boolean);
 
